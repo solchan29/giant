@@ -43,7 +43,6 @@ public class NoticeController {
         return noticeService.selectNoticeList();
     }
 
-    // 嫄곕옒泥� �젙蹂� 吏곸썝
     @RequestMapping(value = "/{nCode}", method = RequestMethod.GET)
     public @ResponseBody
     NoticeVO getCustomerUserInfo (@PathVariable("nCode") String nCode, HttpServletRequest request) throws Exception{
