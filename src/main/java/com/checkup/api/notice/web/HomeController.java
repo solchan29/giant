@@ -1,4 +1,4 @@
-package com.heartbreaker.app;
+package com.checkup.api.notice.web;
 
 import java.text.DateFormat;
 import java.util.Date;

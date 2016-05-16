@@ -20,8 +20,7 @@
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
-	
-	<context:component-scan base-package="com.heartbreaker.app" />
+
 	<context:component-scan base-package="com.checkup.api.notice.web" />
 	
 </beans:beans>
