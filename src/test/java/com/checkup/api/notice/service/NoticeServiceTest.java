@@ -10,7 +10,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.inject.Inject;
 import java.util.List;
-import java.util.Map;
 
 
 /**
@@ -21,4 +20,17 @@ import java.util.Map;
 @ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/spring/**/*.xml"})
 public class NoticeServiceTest {
 
+    private static final Logger logger = LoggerFactory.getLogger(NoticeServiceTest.class);
+
+    @Inject
+    private NoticeService noticeService;
+
+    @Test
+    public void testRead() throws Exception{
+        List<NoticeVO> list = noticeService.selectNoticeList();
+
+        for(NoticeVO noticeVO : list){
+            System.out.println(noticeVO.getnCode());
+        }
+    }
 }
